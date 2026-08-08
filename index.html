@@ -16,6 +16,9 @@
     h3 {
       text-align: center;
       margin-bottom: 20px;
+      text-transform: uppercase; /* Делает буквы заглавными */
+      letter-spacing: 1px;       /* Чуть раздвигает буквы — выглядит аккуратнее */
+      font-weight: 700;
     }
     input {
       width: 100%;
@@ -29,15 +32,20 @@
     button {
       width: 100%;
       padding: 14px;
-      background: #007bff;
+      /* Фирменный цвет D1894B */
+      background-color: #D1894B;
       color: white;
       border: none;
       border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover {
+      background-color: #b8773f; /* Чуть темнее при наведении — приятный эффект */
     }
     button:disabled {
-      background: #ccc;
+      background-color: #aaa;
     }
     #result {
       margin-top: 18px;
@@ -50,8 +58,10 @@
   </style>
 </head>
 <body>
-  <h3>Активируй промокод</h3>
-  <input type="text" id="promoInput" placeholder="Например: FOOD15" />
+  <!-- Заголовок заглавными буквами -->
+  <h3>ИПА крафтовый бар</h3>
+
+  <input type="text" id="promoInput" placeholder="Вписывай только заглавными буквами" />
   <button id="activateBtn">Активировать</button>
   <div id="result"></div>
 
